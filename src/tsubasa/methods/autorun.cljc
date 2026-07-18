@@ -50,7 +50,7 @@
      ;; (FAIL-OPEN: engine down / operator DID absent → the beat still completes locally).
      (let [pos (vec (remove #(clojure.string/starts-with? (str %) "--") args))
            bridge? (boolean (some #{"--bridge"} args))
-           seed (or (first pos) "20-actors/tsubasa/data/seed-fares.kotoba.edn")
+           seed (or (first pos) "data/seed-fares.kotoba.edn")
            log-path (or (second pos)
                         (-> (clojure.java.io/file *file*) .getParentFile .getParentFile
                             (clojure.java.io/file "data" "persisted" "tsubasa.observations.kotoba.edn") str))

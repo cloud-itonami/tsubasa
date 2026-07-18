@@ -100,7 +100,7 @@
 
 #?(:clj
    (defn -main [& args]
-     (let [seed (or (first args) "20-actors/tsubasa/data/seed-fares.kotoba.edn")
+     (let [seed (or (first args) "data/seed-fares.kotoba.edn")
            rows (edn/read-string (slurp seed))
            analysis (analyze/analyze rows) coverage (analyze/coverage rows)
            {:keys [text source]} (digest analysis coverage)]

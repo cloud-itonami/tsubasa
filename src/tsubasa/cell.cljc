@@ -19,9 +19,9 @@
 
 #?(:clj
    (defn- actor-dir
-     "20-actors/tsubasa, resolved from this namespace's classpath location (runs from any cwd)."
+     "Standalone repository root, resolved from this namespace's classpath location."
      []
-     (-> (io/resource "tsubasa/cell.cljc") io/file .getParentFile)))
+     (-> (io/resource "tsubasa/cell.cljc") io/file .getParentFile .getParentFile .getParentFile)))
 
 #?(:clj
    (defn fire

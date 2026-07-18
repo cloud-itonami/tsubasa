@@ -198,7 +198,7 @@
 #?(:clj
    (defn -main [& args]
      (let [log (or (first args)
-                   "20-actors/tsubasa/data/persisted/tsubasa.observations.kotoba.edn")
+                   "data/persisted/tsubasa.observations.kotoba.edn")
            r (push log {})]   ; dry-run unless TSUBASA_KOTOBA_LIVE=1
        (println (str ";; tsubasa bridge — mode=" (:mode r) " pending/pushed="
                      (or (:pending r) (:pushed r)) " principal=" (:principal r)

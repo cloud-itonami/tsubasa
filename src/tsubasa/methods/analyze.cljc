@@ -251,7 +251,7 @@
 
 #?(:clj
    (defn -main [& args]
-     (let [seed (or (first args) "20-actors/tsubasa/data/seed-fares.kotoba.edn")
+     (let [seed (or (first args) "data/seed-fares.kotoba.edn")
            rows (clojure.edn/read-string (slurp seed))
            a (analyze rows)
            cov (coverage rows)]
