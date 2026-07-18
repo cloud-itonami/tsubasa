@@ -10,7 +10,8 @@
             [clojure.test :refer [deftest is run-tests]]))
 
 (def ^:private seed-path
-  (str (fs/file (fs/parent (fs/absolutize *file*)) ".." "data" "seed-fares.kotoba.edn")))
+  (str (fs/file (fs/parent (fs/parent (fs/parent (fs/parent (fs/absolutize *file*)))))
+                "data" "seed-fares.kotoba.edn")))
 (def ^:private rows (edn/read-string (slurp seed-path)))
 (def ^:private analysis (a/analyze rows))
 (def ^:private coverage (a/coverage rows))

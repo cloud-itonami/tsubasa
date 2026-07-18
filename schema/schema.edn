@@ -1,4 +1,4 @@
-;; 20-actors/tsubasa/schema.edn — Datomic/Datascript-compatible schema for
+;; schema/schema.edn — Datomic/Datascript-compatible schema for
 ;; this actor's datomized .edn files (manifest/edn-datomize.cljs port).
 ;; :db/ident attribute defs. No Datomic-only tx keys (:db.install/_attribute etc).
 ;; Hand-editing OK for now (no automated regen script exists in this repo yet).

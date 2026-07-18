@@ -1,5 +1,11 @@
 # tsubasa 翼 — flight-route / fare discovery commons
 
+This is the standalone actor repository. Canonical contracts are EDN
+(`manifest.edn`, `schema/*.edn`, `lex/*.edn`, and `data/*.edn`).
+Runtime code lives under `src/tsubasa`, tests under `test/tsubasa`, and
+wire projections—when needed—belong only under `wire/`. Run the complete
+suite with `bb test`.
+
 The **Skyscanner inversion**. An honest fare/route meta-search that takes no commission, never
 tracks the searcher, and surfaces CO₂ on every option. tsubasa **plans**; its sibling
 [`watari`](../watari) **tracks** live aircraft positions. Neither is an OTA — tsubasa transacts

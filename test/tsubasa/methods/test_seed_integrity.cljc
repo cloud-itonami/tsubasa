@@ -9,8 +9,9 @@
 
 ;; Paths resolved relative to THIS file (cwd-independent) — methods/ → tsubasa/ → 20-actors/ → root.
 (def ^:private here (fs/parent (fs/absolutize *file*)))
-(def ^:private seed-path (str (fs/file here ".." "data" "seed-fares.kotoba.edn")))
-(def ^:private onto-path (str (fs/file here ".." ".." ".." "00-contracts" "schemas" "flight-fare-ontology.kotoba.edn")))
+(def ^:private root (fs/parent (fs/parent (fs/parent here))))
+(def ^:private seed-path (str (fs/file root "data" "seed-fares.kotoba.edn")))
+(def ^:private onto-path (str (fs/file root "schema" "flight-fare-ontology.kotoba.edn")))
 
 (def ^:private rows (edn/read-string (slurp seed-path)))
 (def ^:private onto (edn/read-string (slurp onto-path)))
