@@ -3,7 +3,7 @@
 ;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_analyze.cljc
 (ns tsubasa.methods.test-analyze
   (:require [tsubasa.methods.analyze :as a]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def ^:private rows
@@ -80,7 +80,7 @@
   ;; The defining structural invariants: the analysis has no commission / affiliate /
   ;; urgency / scarcity / searcher / person input and emits no such datom — by construction.
   (let [ds (a/datoms (a/analyze rows))
-        attrs (map #(str/lower-case (str (nth % 2))) ds)
+        attrs (map #(str/lower (str (nth % 2))) ds)
         forbidden ["commission" "affiliate" "merchant" "sponsored"   ; G1 (no inflow)
                    "urgency" "scarcity" "price-will-rise" "seats-left" ; G3 (anti-dark)
                    "searcher" "person" "profile" "pattern-of-life"]]  ; G5 (no tracking)

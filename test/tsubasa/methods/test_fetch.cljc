@@ -2,7 +2,7 @@
 ;; tsubasa 翼 — autonomous fetch-leg tests (read-only, fail-open, member-refused).
 ;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_fetch.cljc
 (ns tsubasa.methods.test-fetch
-  (:require [tsubasa.methods.fetch :as f]
+  (:require [kotoba.lang.text] [tsubasa.methods.fetch :as f]
             [clojure.test :refer [deftest is run-tests]]))
 
 ;; A stubbed fetch-fn stands in for the network — the test proves the ACTOR can fetch +
@@ -23,7 +23,7 @@
     (let [row (first (:rows r))]
       (is (= :authoritative (:fare/sourcing row)))
       (is (= "https://example.org/fares.json" (:fare/source row)))        ; provenance
-      (is (not (clojure.string/includes? (:fare/book-url row) "aff="))))))  ; affiliate-stripped (G1)
+      (is (not (kotoba.lang.text/includes? (:fare/book-url row) "aff="))))))  ; affiliate-stripped (G1)
 
 (deftest fetch-is-fail-open-on-dead-source
   ;; a nil fetch (network down / 404) degrades to an empty batch — never throws (no heartbeat block)

@@ -21,7 +21,7 @@
     G4  emissions-honest — co2-kg is surfaced on every route (greenest is first-class).
     G5  no-person-tracking — analysis takes fares only; NO :searcher / :person datom
         is ever emitted (a search is stateless w.r.t. the searcher)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── pure helpers ──────────────────────────────────────────────────────────────
 

@@ -6,7 +6,7 @@
   first-class), anti-dark (G3 — no urgency/scarcity field), no-person-tracking (G5 — stateless w.r.t.
   searcher). The optional `from kotoba import datalog, llm` host binding is unused and is the omitted
   leg."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; Affiliate / tracking params stripped from an onward airline link (G1). Mirrors okaimono.
 (def ^:private AFFILIATE-PARAMS
@@ -32,7 +32,7 @@
                      (str/split query #"&"))
                 [])
         kept (filter (fn [[k _]]
-                       (let [kl (str/lower-case k)]
+                       (let [kl (str/lower k)]
                          (and (not (AFFILIATE-PARAMS kl))
                               (not (some #(str/starts-with? kl %) AFFILIATE-PREFIXES)))))
                      pairs)

@@ -15,7 +15,7 @@
   No-server-key: this writer holds no key and performs NO network I/O — it only
   appends to a local file. Observations are :representative at R0/R1; the ledger is
   an honest fare/competition record, NEVER a target-list and NEVER a paid ranking."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.java.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])

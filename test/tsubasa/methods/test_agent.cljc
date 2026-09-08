@@ -5,7 +5,7 @@
   no commission/tithe, member principal), G3 anti-dark (no urgency/scarcity field). Note: the
   Python `compare` is `compare-fares` here (avoids shadowing clojure.core/compare)."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [tsubasa.methods.agent :as agent]))
 
 (defn- fare* [fid fare-minor & {:keys [bag co2 dur carrier url]
@@ -46,7 +46,7 @@
 (deftest test-no-urgency-field
   (doseq [r (agent/search-fares "HND" "ITM" "2026-07-01" (route-fares))
           k (keys r)]
-    (let [kl (str/lower-case k)]
+    (let [kl (str/lower k)]
       (is (not (str/includes? kl "urgen")))
       (is (not (str/includes? kl "scarcit")))
       (is (not (str/includes? (str/replace kl "_" "") "willrise"))))))

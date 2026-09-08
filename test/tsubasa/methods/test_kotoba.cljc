@@ -3,7 +3,7 @@
 ;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_kotoba.cljc
 (ns tsubasa.methods.test-kotoba
   (:require [tsubasa.methods.kotoba :as k]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 

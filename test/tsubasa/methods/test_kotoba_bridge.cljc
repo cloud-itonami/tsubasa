@@ -4,7 +4,7 @@
 (ns tsubasa.methods.test-kotoba-bridge
   (:require [tsubasa.methods.kotoba-bridge :as kb]
             [tsubasa.methods.kotoba :as k]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 

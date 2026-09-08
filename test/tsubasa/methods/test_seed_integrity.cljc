@@ -3,7 +3,7 @@
 ;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_seed_integrity.cljc
 (ns tsubasa.methods.test-seed-integrity
   (:require [clojure.edn :as edn]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [babashka.fs :as fs]
             [clojure.test :refer [deftest is run-tests]]))
 
@@ -76,7 +76,7 @@
           (str "seed uses :" a " which is NOT declared in the ontology")))))
 
 (deftest g1-g3-g5-no-forbidden-key-in-the-data   ; structural at the data layer
-  (let [all-keys (->> rows (mapcat keys) (map (comp str/lower-case name)) set)
+  (let [all-keys (->> rows (mapcat keys) (map (comp str/lower name)) set)
         forbidden ["commission" "affiliate" "merchant" "sponsored"
                    "urgency" "scarcity" "seatsleft" "searcher" "person" "profile"]]
     (doseq [bad forbidden]
