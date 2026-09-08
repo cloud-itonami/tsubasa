@@ -4,7 +4,7 @@
 (ns tsubasa.methods.test-ingest
   (:require [tsubasa.methods.ingest :as ing]
             [tsubasa.methods.analyze :as a]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (def ^:private clean-raw
@@ -69,7 +69,7 @@
 
 (deftest no-forbidden-attr-in-ingested-rows
   (let [{:keys [rows]} (ing/ingest [clean-raw] {:source "x" :as-of "t" :source-kind :public})
-        attrs (->> rows (mapcat keys) (map (comp str/lower-case name)) set)]
+        attrs (->> rows (mapcat keys) (map (comp str/lower name)) set)]
     (doseq [bad ["commission" "affiliate" "merchant" "searcher" "person" "urgency"]]
       (is (not-any? #(str/includes? % bad) attrs)))))
 

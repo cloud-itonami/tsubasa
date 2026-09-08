@@ -26,7 +26,7 @@
   + :fare/ingested-at (caller-supplied as-of). Per-row fail-open: a bad row is dropped
   and reported, never aborts the batch."
   (:require [tsubasa.methods.agent :as agent]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             #?(:clj [clojure.edn :as edn])))
 
 (def ^:private forbidden-key-substrings
@@ -37,7 +37,7 @@
 (defn- poisoned?
   "True if a raw fare map carries any charter-forbidden key (G1/G3/G5)."
   [raw]
-  (let [ks (map #(-> % name str/lower-case (str/replace #"[-_]" "")) (keys raw))]
+  (let [ks (map #(-> % name str/lower (str/replace #"[-_]" "")) (keys raw))]
     (boolean (some (fn [k] (some #(str/includes? k %) forbidden-key-substrings)) ks))))
 
 (def ^:private allowed-source-kinds #{:public :member-principal})
@@ -57,7 +57,7 @@
 
 (defn- ->cabin [v]
   (cond (keyword? v) v
-        (string? v) (keyword (str/lower-case v))
+        (string? v) (keyword (str/lower v))
         :else :economy))
 
 (defn normalize-fare
@@ -78,8 +78,8 @@
       :else
       (let [cabin (->cabin (g raw :cabin "cabin"))
             id (or (g raw :id "id")
-                   (str "fare." (str/lower-case (str origin)) "-" (str/lower-case (str dest))
-                        "-" (str/lower-case (str carrier)) "-" (name cabin)))]
+                   (str "fare." (str/lower (str origin)) "-" (str/lower (str dest))
+                        "-" (str/lower (str carrier)) "-" (name cabin)))]
         {:type :fare
          :fare/id id
          :fare/origin (str origin)

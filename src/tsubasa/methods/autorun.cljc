@@ -16,7 +16,7 @@
   so a recurring loop over a static seed never bloats the chain. No-server-key:
   appends to a local file only, no network I/O. DISCOVERY ONLY — tsubasa takes no
   commission, never books, never tracks the searcher."
-  (:require [tsubasa.methods.analyze :as a]
+  (:require [kotoba.lang.text] [tsubasa.methods.analyze :as a]
             [tsubasa.methods.kotoba :as k]
             #?(:clj [tsubasa.methods.kotoba-bridge :as bridge])
             #?(:clj [clojure.edn :as edn])))
@@ -48,7 +48,7 @@
    (defn -main [& args]
      ;; flags: --bridge pushes the local commit-DAG to the LIVE kotoba engine after persist
      ;; (FAIL-OPEN: engine down / operator DID absent → the beat still completes locally).
-     (let [pos (vec (remove #(clojure.string/starts-with? (str %) "--") args))
+     (let [pos (vec (remove #(kotoba.lang.text/starts-with? (str %) "--") args))
            bridge? (boolean (some #{"--bridge"} args))
            seed (or (first pos) "data/seed-fares.kotoba.edn")
            log-path (or (second pos)

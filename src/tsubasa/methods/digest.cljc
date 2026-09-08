@@ -15,7 +15,7 @@
   construction — it restates DISCLOSED facts (cheapest/greenest/fastest, which routes
   have thin competition) and NEVER invents urgency / a 'book now' nudge (G3) or a paid
   recommendation (G1/G2)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [tsubasa.methods.analyze :as analyze]
             #?(:clj [clojure.edn :as edn])
             #?(:clj [cheshire.core :as json])

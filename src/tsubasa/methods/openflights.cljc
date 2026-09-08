@@ -14,7 +14,7 @@
 
   Region is best-effort from a country→region map (OpenFlights uses country NAMES); an unknown
   country maps to `:unknown` (honestly excluded from a region target, never guessed)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── country (OpenFlights name) → world region (best-effort, honest :unknown fallback) ──
 (def ^:private country->region

@@ -15,7 +15,7 @@
 (ns build
   (:require [babashka.process :as p]
             [babashka.fs :as fs]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (defn- sh [& args]
   ;; returns {:out .. :err .. :exit ..}; never throws on non-zero (we inspect :exit)

@@ -3,7 +3,7 @@
 ;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_identity.cljc
 (ns tsubasa.methods.test-identity
   (:require [tsubasa.methods.identity :as id]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (deftest did-key-encodes-ed25519-multicodec

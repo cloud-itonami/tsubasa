@@ -18,7 +18,7 @@
     - DRY-RUN by default (returns exact request bodies, no I/O); live = TSUBASA_KOTOBA_LIVE=1 / :live true.
   HTTP is injectable (:http-post / :transport). Deterministic; no wall clock."
   (:require [tsubasa.methods.kotoba :as k]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [multiformats.core :as mf]
             #?(:clj [babashka.http-client :as http])
             #?(:clj [cheshire.core :as json])))

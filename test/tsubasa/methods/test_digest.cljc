@@ -5,7 +5,7 @@
   (:require [tsubasa.methods.digest :as d]
             [tsubasa.methods.analyze :as a]
             [clojure.edn :as edn]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [babashka.fs :as fs]
             [clojure.test :refer [deftest is run-tests]]))
 

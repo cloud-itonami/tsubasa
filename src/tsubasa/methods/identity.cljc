@@ -18,7 +18,7 @@
   the seed\" guarantee is a TEE/enclave or threshold-MPC construction — repo-future.)
 
   Pure stdlib (java.security Ed25519 + base58btc); deterministic verify; no network."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [multiformats.core :as mf]
             #?(:clj [babashka.process :as p])))
 
