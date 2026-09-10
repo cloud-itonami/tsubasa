@@ -55,17 +55,17 @@ seed, and the datom emitter — and proven by `test_analyze` + `test_seed_integr
   (cells.edn, node asher, cron `27 * * * *`, healthz 13090).
 - `methods/test_*.cljc` — analyze / kotoba / autorun / seed-integrity / ingest / digest / fetch /
   identity / kotoba_bridge / openflights suites.
-- `run_tests.clj` — bb-native runner (no shell — per the repo clj/bb rule; supersedes `run_tests.sh`).
+- `run_tests.kotoba` — bb-native runner (no shell — per the repo clj/bb rule; supersedes `run_tests.sh`).
 
 ## Run (scripts are bb — repo clj/bb rule; no shell)
 ```
-bb 20-actors/tsubasa/run_tests.clj                                   # 74 tests / 634 assertions (cwd-independent)
+bb 20-actors/tsubasa/run_tests.kotoba                                   # 74 tests / 634 assertions (cwd-independent)
 bb --classpath 20-actors 20-actors/tsubasa/methods/autorun.cljc 20-actors/tsubasa/data/seed-fares.kotoba.edn data/persisted/tsubasa.observations.kotoba.edn --bridge  # heartbeat + push to LIVE engine (dry-run unless TSUBASA_KOTOBA_LIVE=1)
 bb --classpath 20-actors 20-actors/tsubasa/methods/analyze.cljc      # competition + fare map + coverage
 bb --classpath 20-actors 20-actors/tsubasa/methods/autorun.cljc      # one heartbeat → append to the ledger
 bb --classpath 20-actors 20-actors/tsubasa/methods/digest.cljc       # Murakumo digest (fail-open template)
 bb --classpath 20-actors 20-actors/tsubasa/methods/fetch.cljc "<public-fare-source-url>" "<as-of>"  # AUTONOMOUS read-only fetch → ingest
-bb --classpath 20-actors 20-actors/tsubasa/wasm/build.clj <component.wasm>   # verify WASM cleanliness + CID (operator)
+bb --classpath 20-actors 20-actors/tsubasa/wasm/build.kotoba <component.wasm>   # verify WASM cleanliness + CID (operator)
 ```
 
 ## Gating (G8 — UNLOCKED R3, charter-bounded)
