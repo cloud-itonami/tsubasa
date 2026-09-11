@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 cell entry — kotodama-cell-runner contract (ADR-2605192415 §7.1).
 (ns tsubasa.cell
   "tsubasa 翼 cell — registered in 50-infra/cluster/murakumo/cell-runner/cells.edn as

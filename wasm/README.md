@@ -30,7 +30,7 @@ is the conformance oracle the Rust port must match).
 
 ```
 cargo component build --release --target wasm32-wasip2     # operator
-bb build.clj target/wasm32-wasip2/release/tsubasa_core.wasm   # verify + CID
+kbb build.cljk target/wasm32-wasip2/release/tsubasa_core.wasm   # verify + CID
 # then register the CID in INFRA_ACTORS.tsubasa.wasmCid + public/actor/tsubasa/did.json _meta.wasmCid
 ```
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — fare-observation kotoba Datom-log writer (content-addressed).
 (ns tsubasa.methods.kotoba
   "kotoba.cljc — tsubasa 翼 append-only FARE-OBSERVATION LEDGER writer

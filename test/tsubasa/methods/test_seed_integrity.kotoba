@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — seed ↔ ontology integrity + data-layer gate invariants.
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_seed_integrity.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_seed_integrity.cljc
 (ns tsubasa.methods.test-seed-integrity
   (:require [clojure.edn :as edn]
             [kotoba.lang.text :as str]

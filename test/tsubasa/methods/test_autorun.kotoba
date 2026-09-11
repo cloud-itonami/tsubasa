@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — heartbeat (idempotent-by-content) tests.
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_autorun.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_autorun.cljc
 (ns tsubasa.methods.test-autorun
   (:require [tsubasa.methods.autorun :as ar]
             [tsubasa.methods.kotoba :as k]

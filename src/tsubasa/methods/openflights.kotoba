@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — OpenFlights real public-domain coverage source (R3+). ADR-2606072802 §R3.
 (ns tsubasa.methods.openflights
   "openflights.cljc — fold the OpenFlights PUBLIC-DOMAIN datasets (Open Database License) into

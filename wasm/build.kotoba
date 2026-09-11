@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — WASM component build verifier (bb). ADR-2606072802 §R3.
 ;;
 ;; Per the repo-wide rule (root CLAUDE.md §"Operational code = clj/bb"): first-party
@@ -11,7 +11,7 @@
 ;; pattern) and prints its content-address. Recommended: port the pure analyze core
 ;; (methods/analyze.cljc) to a tiny Rust `tsubasa-core` crate against wasm/world.wit.
 ;;
-;;   bb 20-actors/tsubasa/wasm/build.clj <compiled-component.wasm>
+;;   kbb 20-actors/tsubasa/wasm/build.cljk <compiled-component.wasm>
 (ns build
   (:require [babashka.process :as p]
             [babashka.fs :as fs]
@@ -26,7 +26,7 @@
 (defn -main [& args]
   (let [wasm (first args)]
     (when (or (nil? wasm) (not (fs/exists? wasm)))
-      (println "usage: bb build.clj <compiled-component.wasm>   # after cargo component build")
+      (println "usage: kbb build.cljk <compiled-component.wasm>   # after cargo component build")
       (println "(verifies the artifact's charter cleanliness + prints its CID)")
       (System/exit 2))
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — actor self-certifying did:key identity (R3+). ADR-2606072802 §R3.
 (ns tsubasa.methods.identity
   "identity.cljc — tsubasa 翼 self-certifying `did:key` (Ed25519), present-only.

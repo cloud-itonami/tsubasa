@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — autonomous fetch-leg tests (read-only, fail-open, member-refused).
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_fetch.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_fetch.cljc
 (ns tsubasa.methods.test-fetch
   (:require [kotoba.lang.text] [tsubasa.methods.fetch :as f]
             [clojure.test :refer [deftest is run-tests]]))

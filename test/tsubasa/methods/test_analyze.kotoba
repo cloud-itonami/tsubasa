@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — analyze / datoms / coverage tests (+ G1/G3/G5 structural invariants).
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_analyze.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_analyze.cljc
 (ns tsubasa.methods.test-analyze
   (:require [tsubasa.methods.analyze :as a]
             [kotoba.lang.text :as str]
