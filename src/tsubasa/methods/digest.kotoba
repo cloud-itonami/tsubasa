@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — Murakumo-narrated fare digest (R3, G6 local-only, fail-open). ADR-2606072802.
 (ns tsubasa.methods.digest
   "digest.cljc — tsubasa 翼 human-readable digest of the competition / fare map.

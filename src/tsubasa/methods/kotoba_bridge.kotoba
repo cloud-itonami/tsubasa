@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — push the local commit-DAG into the LIVE kotoba engine (R3+). ADR-2606072802 §R3.
 (ns tsubasa.methods.kotoba-bridge
   "kotoba_bridge.cljc — tsubasa 翼 bridge: each local fare-observation tx → one

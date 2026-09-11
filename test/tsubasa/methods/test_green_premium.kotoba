@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — tests for the green-premium cost↔emissions tradeoff.
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_green_premium.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_green_premium.cljc
 (ns tsubasa.methods.test-green-premium
   "Tests for green-premium — the explicit tradeoff between the cheapest and the greenest fare on a
   route: the extra true total cost to fly the lowest-CO₂ option and the CO₂ it saves. Emissions-honest

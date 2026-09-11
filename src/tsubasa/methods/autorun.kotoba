@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — autonomous heartbeat: analyze → append fare observations to the ledger.
 (ns tsubasa.methods.autorun
   "autorun.cljc — tsubasa 翼 deterministic, idempotent-by-content heartbeat

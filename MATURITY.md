@@ -30,16 +30,16 @@ emits a per-region airport gap worklist each run (airport target ≈ 36, carrier
 ## Tests
 
 ```
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_analyze.cljc         # 10 tests / 45 assertions
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_kotoba.cljc          #  5 tests / 15 assertions (ledger)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_autorun.cljc         #  4 tests / 13 assertions (heartbeat + idempotency)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_seed_integrity.cljc  # 10 tests / 302 assertions (seed ↔ ontology + data-layer gates)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_ingest.cljc          #  9 tests /  31 assertions (R3 live ingest + G8 bound + G1/G4/G5)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_digest.cljc          #  6 tests /  16 assertions (R3 Murakumo fail-open + anti-dark)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_fetch.cljc           #  3 tests /  11 assertions (R3 autonomous read-only fetch + fail-open)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_identity.cljc        #  5 tests /  10 assertions (R3+ self did:key keygen + present-only sign/verify)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_kotoba_bridge.cljc   #  7 tests /  22 assertions (R3+ allowlist/cursor/leash/fail-open)
-bb --classpath 20-actors 20-actors/tsubasa/methods/test_openflights.cljc     #  5 tests /  12 assertions (R3+ real ODbL source → coverage)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_analyze.cljc         # 10 tests / 45 assertions
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_kotoba.cljc          #  5 tests / 15 assertions (ledger)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_autorun.cljc         #  4 tests / 13 assertions (heartbeat + idempotency)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_seed_integrity.cljc  # 10 tests / 302 assertions (seed ↔ ontology + data-layer gates)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_ingest.cljc          #  9 tests /  31 assertions (R3 live ingest + G8 bound + G1/G4/G5)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_digest.cljc          #  6 tests /  16 assertions (R3 Murakumo fail-open + anti-dark)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_fetch.cljc           #  3 tests /  11 assertions (R3 autonomous read-only fetch + fail-open)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_identity.cljc        #  5 tests /  10 assertions (R3+ self did:key keygen + present-only sign/verify)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_kotoba_bridge.cljc   #  7 tests /  22 assertions (R3+ allowlist/cursor/leash/fail-open)
+kbb --classpath 20-actors 20-actors/tsubasa/methods/test_openflights.cljc     #  5 tests /  12 assertions (R3+ real ODbL source → coverage)
 bb 20-actors/tsubasa/run_tests.kotoba                                          # ALL suites + handlers (bb-native, cwd-independent)
 ```
 

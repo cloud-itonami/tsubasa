@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — analyze → datoms → coverage (clj-native, pure stdlib).
 (ns tsubasa.methods.analyze
   "tsubasa 翼 — the flight-commons analytical core (ADR-2606072800).

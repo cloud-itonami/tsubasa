@@ -4,7 +4,7 @@ This is the standalone actor repository. Canonical contracts are EDN
 (`manifest.edn`, `schema/*.edn`, `lex/*.edn`, and `data/*.edn`).
 Runtime code lives under `src/tsubasa`, tests under `test/tsubasa`, and
 wire projections—when needed—belong only under `wire/`. Run the complete
-suite with `bb test`.
+suite with `kbb -M:test`.
 
 The **Skyscanner inversion**. An honest fare/route meta-search that takes no commission, never
 tracks the searcher, and surfaces CO₂ on every option. tsubasa **plans**; its sibling

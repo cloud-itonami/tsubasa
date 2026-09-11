@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — autonomous READ-ONLY public-fare fetch leg (R3). ADR-2606072802 §R3.
 (ns tsubasa.methods.fetch
   "fetch.cljc — tsubasa 翼 AUTONOMOUS read-only public-fare fetch.
@@ -51,7 +51,7 @@
 #?(:clj
    (defn -main [& args]
      ;; Autonomous: the ACTOR runs this read-only fetch itself (no operator, no key).
-     ;;   bb fetch.cljc <public-fare-source-url> [as-of]
+     ;;   kbb fetch.cljk <public-fare-source-url> [as-of]
      (let [url (or (first args)
                    (throw (ex-info "usage: fetch.cljc <public-fare-source-url> [as-of]" {})))
            as-of (or (second args) "manual")

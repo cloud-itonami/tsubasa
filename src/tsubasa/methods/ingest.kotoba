@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — live fare ingest adapter (charter-clean, R3). ADR-2606072802.
 (ns tsubasa.methods.ingest
   "ingest.cljc — tsubasa 翼 LIVE fare ingest adapter (R3, G8 founder-attested).
@@ -117,7 +117,7 @@
    (defn -main [& args]
      ;; The operator/member fetch leg writes a payload EDN file in their OWN runtime; this
      ;; loop only NORMALIZES it (no network, no key). Default source-kind :public.
-     ;;   bb ingest.cljc <payload.edn> <source> <as-of> [member]
+     ;;   kbb ingest.cljk <payload.edn> <source> <as-of> [member]
      (let [payload-path (or (first args)
                             (throw (ex-info "usage: ingest.cljc <payload.edn> <source> <as-of> [member]" {})))
            source (or (second args) "")

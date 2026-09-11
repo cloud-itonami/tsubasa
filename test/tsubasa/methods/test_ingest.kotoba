@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — live-ingest adapter tests (charter bounds enforced).
-;; Run:  bb --classpath 20-actors 20-actors/tsubasa/methods/test_ingest.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tsubasa/methods/test_ingest.cljc
 (ns tsubasa.methods.test-ingest
   (:require [tsubasa.methods.ingest :as ing]
             [tsubasa.methods.analyze :as a]

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tsubasa 翼 — bb-native test runner (Clojure / babashka; no shell). ADR-2606072802.
 ;;
 ;; Per the repo-wide rule (root CLAUDE.md §"Operational code = clj/bb"): first-party
