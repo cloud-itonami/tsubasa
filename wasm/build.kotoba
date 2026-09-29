@@ -1,7 +1,7 @@
 #!/usr/bin/env kbb
 ;; tsubasa 翼 — WASM component build verifier (bb). ADR-2606072802 §R3.
 ;;
-;; Per the repo-wide rule (root CLAUDE.md §"Operational code = clj/bb"): first-party
+;; Per the repo-wide rule (root AGENTS.md §"Operational code = clj/bb"): first-party
 ;; tooling is clj/bb, NOT shell. Shelling out to a SYSTEM BINARY (wasm-tools / ipfs) via
 ;; babashka.process is allowed — that is not "a shell script", it is invoking installed
 ;; tools from clj logic.
